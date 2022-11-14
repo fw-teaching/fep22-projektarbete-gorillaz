@@ -14,3 +14,13 @@ for (let i = 0; i < products.length; i++){
             ${products[i].name}: ${products[i].price}
         </li>`*/
 }
+
+let count = 0;
+const myTimer = setInterval(function () {
+    console.log("Hello", count)
+    count++;
+}, 1000)
+
+function stopHello() {
+    clearInterval(myTimer);
+}
