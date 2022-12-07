@@ -14,7 +14,7 @@ for (let i = 0; i < products.length; i++){
             ${products[i].name}: ${products[i].price}
         </li>`*/
 }
-
+/* Kommenterar bort för det är ett helvete att följa med console xd
 let count = 0;
 const myTimer = setInterval(function () {
     console.log("Hello", count)
@@ -23,4 +23,4 @@ const myTimer = setInterval(function () {
 
 function stopHello() {
     clearInterval(myTimer);
-}
+}*/
