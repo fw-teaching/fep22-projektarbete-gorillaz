@@ -1,5 +1,15 @@
 console.log('main.js init');
 
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+  
+  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
 const products = [
     {name: "dildo", price: 69.90, stock: 100},
     {name: "amongus", price: 1069.90, stock: 45},
