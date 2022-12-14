@@ -13,12 +13,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-
-    <script src="./assets/js/main.js"></script>
-
-    <!-- Header -->
-
     <div class="header">
         <h1>CASINO GORILLAZ</h1>
     </div>
@@ -35,52 +29,27 @@
         <a href="./pages/gallery.html">Happy Clients</a>
     </div>
 
-    <div id="content"></div>
+    <div id="content">
+        <form id="registration" >
+            First name:
+            <input type="text" id="fname"><br>
+            Last name:
+            <input type="text" id="lname"><br>
+            <button type="submit" id="submit">REGISTER</button>
+
+        </form>
+    </div>
 
 
-    <!-- Footer -->
+    <!-- how to implement handleuserdata here? pls fix-->
+    <button class="info" onclick="handleUserData()"> INFO </button>
+
+
     <div class="footer">
         <h2>Footer</h2>
     </div>
 
-    <!--<button type="button" onclick="stopHello()">STOP IT</button>
-=======
-   
- 
-    <button type="button" onclick="stopHello()">STOP IT</button>
->>>>>>> cd6ba29a249a8d2bbb7dfafcb21c73fb678c6e7f
-
-    <h1 id="timer-output"></h1>
-    <button id="Info">Info</button>
-    <p id="gibData">data comes here >:)</p>
-               <p id="geoInfo">Your location comes here</p>
-    <script>
-        console.log("Kitchen timer INIT")
-
-        // Grundutförande
-        let secondsLeft = 30;
-        const outputElem = document.querySelector("#timer-output");
-
-        outputElem.innerText = secondsLeft;
-        const kitchenTimer = setInterval(function () {
-            secondsLeft--;
-            outputElem.innerText = secondsLeft;
-
-            if (secondsLeft <= 0) {
-                clearInterval(kitchenTimer);
-                outputElem.innerText = "Tiden är ute!"
-            }
-            
-        }, 1000);
-
-
-<<<<<<< HEAD
-    </script>-->
-=======
-    </script>
-     <!-- Flytta script ner för att userdata/geolocation ska funka-->
      <script src="./assets/js/main.js"></script>
->>>>>>> cd6ba29a249a8d2bbb7dfafcb21c73fb678c6e7f
 </body>
 
 </html>
