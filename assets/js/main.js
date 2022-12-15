@@ -10,6 +10,19 @@ function openNav() {
     document.getElementById("mySidebar").style.width = "0";
   }
 
+  //DOES NOT WORK
+function ageVerification(){
+  let age
+  age=document.getElementById("age")
+  if (age<=17){
+    console.log("Du är liten")
+    alert("Du är minderårig och får inte spela!")
+  }
+  else
+  {
+    alert("Välkommen")
+  }
+}
 function handleUserData() {
     var print = document.getElementById("gibData");
     var appVer = navigator.appVer;
@@ -17,7 +30,7 @@ function handleUserData() {
     var browserName = navigator.browserName
     var width = screen.width * window.devicePixelRatio;
     var height = screen.height * window.devicePixelRatio;
-    var ip = location.hostname;
+    var ip = location.host;
     //var windowHeight = window.screen.height;
     //var windowWidth = window.screen.width;
 
@@ -43,3 +56,4 @@ function handleUserData() {
     }
 }
 document.getElementById("Info").addEventListener("click", handleUserData);
+document.getElementById("submit").addEventListener("click", ageVerification);
