@@ -124,8 +124,28 @@ function usernameGen() {
   var username = lname + fname.slice(0,2);
 
   //pls fix so it prints this under register button
-  print.innerHTML = "Välkommen, ditt användarnamn är " + username + "!";
+  usrName.innerHTML = "Välkommen, ditt användarnamn är " + username + "!";
 
+}
+
+function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+}
+
+setInterval(currentTime, 1000);
+
+function currentTime() {
+  const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+
+  let hour = addZero(date.getHours());
+  let minute = addZero(date.getMinutes());
+  let second = addZero(date.getSeconds());
+
+document.getElementById("clock").innerHTML = day + "." + month + "." + year + " " + "kl." + hour + ":" + minute + ":" + second ;
 }
 
 
