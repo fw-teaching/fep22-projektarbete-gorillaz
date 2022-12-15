@@ -1,5 +1,5 @@
 console.log('main.js init');
-checkCookie(); //Tills vidare on load ifall de behövs
+//checkCookie(); //Tills vidare on load ifall de behövs
 
 /* SIDEBAR */
 function openNav() {
@@ -30,6 +30,7 @@ function ageVerification() {
   }
   else {
     console.log("Passed age verification.");
+    usernameGen();
   }
 }
 //Användarinfo, så mycke deprecated att de blir inte riktigt rätt...
@@ -124,7 +125,7 @@ function usernameGen() {
   let datum = new Date();
   localStorage.setItem("date", datum);
   localStorage.getItem("date");
-  setCookie("username", username, 2);
+  setCookie("username", username, 7);
   getCookie("username");
   checkCookie();
 
@@ -156,9 +157,8 @@ document.getElementById("clock").innerHTML = day + "." + month + "." + year + " 
 
 document.getElementById("info").addEventListener("click", handleUserData);
 
-document.getElementById("register").addEventListener("click", usernameGen);
+//document.getElementById("register").addEventListener("click", usernameGen);
 document.getElementById("register").addEventListener("click", validateForm);
 document.getElementById("register").addEventListener("click", ageVerification);
 
-document.getElementById("register").addEventListener("click", login);
 
