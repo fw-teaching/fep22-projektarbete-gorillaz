@@ -56,5 +56,5 @@ function handleUserData() {
             "<br>Longitude: " + position.coords.longitude;
     }
 }
-document.getElementById("Info").addEventListener("click", handleUserData);
+document.getElementById("info").addEventListener("click", handleUserData);
 document.getElementById("submit").addEventListener("click", ageVerification);
