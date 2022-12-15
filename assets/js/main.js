@@ -10,6 +10,15 @@ function openNav() {
     document.getElementById("mySidebar").style.width = "0";
   }
 
+function validateForm() {
+  let fname = document.getElementById("fname").value;
+  let lname = document.getElementById("lname").value;
+  let age = document.getElementById("age").value;
+
+  if (fname == ""|| lname == "" || age == null ) {
+    alert("Please fill in all required fields!");
+  }
+}
 //Age verification
 function ageVerification(){
   let age = document.getElementById("age").value;
@@ -109,6 +118,24 @@ function checkCookie(){
     console.log(localStorage.getItem("username")+" "+localStorage.getItem("date"))
     //To-Do: visits
 }
+
+function usernameGen() {
+  let fname = document.getElementById("fname").value;
+  let lname = document.getElementById("lname").value;
+
+  var username = lname + fname.slice(0,2);
+
+  //pls fix so it prints this under register button
+  print.innerHTML = "Välkommen, ditt användarnamn är " + username + "!";
+
+}
+
+
 document.getElementById("info").addEventListener("click", handleUserData);
-document.getElementById("submit").addEventListener("click", ageVerification);
+
+document.getElementById("register").addEventListener("click", usernameGen);
+document.getElementById("register").addEventListener("click", validateForm);
+document.getElementById("register").addEventListener("click", ageVerification);
+
 document.getElementById("cookieBtn").addEventListener("click", login);
+
