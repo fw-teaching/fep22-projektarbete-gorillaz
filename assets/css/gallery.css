@@ -26,6 +26,15 @@
   justify-content: center;
 }
 
+.main-middle-gallery {
+  flex: 33%;
+  font-size:medium;
+
+  padding-top: 40px;
+
+  text-align: center;
+}
+
 /* THUMBNAILS (ACTIVE) */
 .active,
 .demo:hover {

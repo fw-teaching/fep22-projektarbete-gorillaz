@@ -132,10 +132,7 @@ footer {
   background-color: #2c0e0e70;
 }
 
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
+
 
 #select {
   color: #ffffff;
@@ -167,18 +164,59 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   flex: 50%;
-
-  padding: 40px;
 }
 
 .big-container>.gallery {
-  padding: 20px;
+  padding: 40px;
+}
+
+.big-container-memory {
+  justify-content: center;
+
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 300%;
+
+}
+
+.memory {
+  padding-top: 100px;
+}
+
+.main p {
+  padding-top: 20px;
 }
 
 .main {
-  flex: 70%;
-  background-color: rgb(0, 0, 0);
+  display: flex;
+
+  flex-direction: row;
+
   padding: 20px;
+
+  transition: margin-left .5s;
+
+}
+
+.main-left {
+  flex: 33%;
+
+  padding: 30px;
+
+}
+
+.main-middle {
+  flex: 33%;
+  font-size:x-large;
+
+  text-align: center;
+
+}
+
+.main-right {
+  flex: 33%;
 }
 
 .row {
@@ -195,6 +233,10 @@ footer {
 .small-container {
   flex: 25%;
   padding: 40px;
+}
+
+.border #usrName {
+  text-align: center;
 }
 
 
@@ -214,12 +256,12 @@ footer {
 }
 
 .border {
-  border-color:#472929;
+  border-color: #472929;
   border-radius: 5px;
   border-style: solid;
   border-width: 5px;
 
-padding: 20px;
+  padding: 20px;
 }
 
 .small-container-home {
@@ -233,7 +275,7 @@ padding: 20px;
   flex: 50%;
 
   justify-content: center;
-  
+
 }
 
 #content #registration input {
@@ -276,7 +318,7 @@ padding: 20px;
   justify-content: center;
 
   padding: 20px;
-  
+
 }
 
 .register-button button {

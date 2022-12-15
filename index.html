@@ -17,8 +17,21 @@
         <h1>CASINO GORILLAZ</h1>
     </div>
 
-    <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    <div class="main">
+        <div class="main-left">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+
+        <div class="main-middle">
+            <p id="clock"></p>
+            <script>
+                currentTime();
+            </script>
+        </div>
+
+        <div class="main-right">
+            <!--hit kommer insatta pengamängden och uName-->
+        </div>
     </div>
 
     <div id="mySidebar" class="sidebar">
@@ -36,22 +49,24 @@
         <div class="big-container-home">
 
             <div class="border">
-            <div id="content">
-                <form id="registration">
-                    First name:
-                    <input type="text" id="fname" required><br><br>
-                    Last name:
-                    <input type="text" id="lname" required><br><br>
-                    Ålder:
-                    <input type="number" id="age" required><br><br>
-                    Pengabelopp (€):
-                    <input type="number" id="money"><br><br>
-                </form>
-            </div>
+                <div id="content">
+                    <form id="registration">
+                        First name:
+                        <input type="text" id="fname" required><br><br>
+                        Last name:
+                        <input type="text" id="lname" required><br><br>
+                        Ålder:
+                        <input type="number" id="age" required><br><br>
+                        Pengabelopp (€):
+                        <input type="number" id="money"><br><br>
+                    </form>
+                </div>
 
-            <div class="register-button">
-                <button type="button" id="register">REGISTER</button>
-            </div>
+                <div class="register-button">
+                    <button type="button" id="register">REGISTER</button>
+                </div>
+
+                <h3 id="usrName"></h3>
             </div>
 
 
