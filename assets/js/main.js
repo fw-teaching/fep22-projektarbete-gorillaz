@@ -10,7 +10,7 @@ function openNav() {
     document.getElementById("mySidebar").style.width = "0";
   }
 
-
+//Age verification
 function ageVerification(){
   let age = document.getElementById("age").value;
   console.log(age)
@@ -23,6 +23,7 @@ function ageVerification(){
     alert("Välkommen");
   }
 }
+//Användarinfo
 function handleUserData() {
     var print = document.getElementById("gibData");
     var appVer = navigator.appVer;
@@ -55,5 +56,57 @@ function handleUserData() {
             "<br>Longitude: " + position.coords.longitude;
     }
 }
+function setCookie(cname, cvalue, exdays) {
+    const k = new Date();
+    k.setTime(k.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+k.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    const uinfo=cname+"="+cvalue+";"+expires;
+    console.log(uinfo);
+  }
+  
+function getCookie(cname) 
+{
+    let name=cname + "=";
+    let kakor = document.cookie.split(";"); //Hämtar alla kakor
+
+    for(let i = 0; i < kakor.length; i++) {
+        let c = kakor[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return ""; //< Kod från w3schools ^
+
+  }
+function login(){
+    let username=prompt("Användarnamn?:","");
+    //Sparar även i localstorage (följer videon)
+    localStorage.setItem("username",username);
+    alert("Hej "+localStorage.getItem("username"));
+    let datum=new Date();
+    localStorage.setItem("date",datum); 
+    localStorage.getItem("date");
+    setCookie("username", username, 2);
+    getCookie("username");
+    checkCookie();
+
+}
+function checkCookie(){
+    let user=getCookie("username");
+    console.log("Användaren heter: "+user);
+    if(user=="Antz"){
+       alert("Du e Antz");
+    }else if(user!="Antz"){
+       alert("Du e inte ANtz!");
+    }
+    console.log(document.cookie);
+    console.log(localStorage.getItem("username")+" "+localStorage.getItem("date"))
+    //To-Do: visits
+}
 document.getElementById("info").addEventListener("click", handleUserData);
 document.getElementById("submit").addEventListener("click", ageVerification);
+document.getElementById("cookieBtn").addEventListener("click", login);
