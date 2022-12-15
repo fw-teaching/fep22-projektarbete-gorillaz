@@ -39,7 +39,7 @@ function game() {
         })
 
     }
-
+//Silly goofy saker sker; ibland då datorn vinner får spelaren också ett poäng.
 
     function winner(player, computer) {
         const result = document.querySelector('.result');
@@ -56,7 +56,7 @@ function game() {
                 computerScore++;
                 computerScoreCount.textContent = computerScore;
 
-            } else {
+            } else if(computer=='scissors'){
                 result.textContent = 'Player Won'
                 playerScore++;
                 playerScoreCount.textContent = playerScore;
@@ -67,7 +67,7 @@ function game() {
                 result.textContent = 'Computer Won';
                 computerScore++;
                 computerScoreCount.textContent = computerScore;
-            } else {
+            } else if(computer=='paper'){
                 result.textContent = 'Player Won';
                 playerScore++;
                 playerScoreCount.textContent = playerScore;
@@ -78,7 +78,7 @@ function game() {
                 result.textContent = 'Computer Won';
                 computerScore++;
                 computerScoreCount.textContent = computerScore;
-            } else {
+            } else if(computer=='rock'){
                 result.textContent = 'Player Won';
                 playerScore++;
                 playerScoreCount.textContent = playerScore;
@@ -108,7 +108,7 @@ function game() {
             result.innerText = 'You Lost The Game';
             result.style.color = 'red';
         }
-        else {
+        else if (playerScore==computerScore) {
             result.innerText = 'Tie';
             result.style.color = 'grey'
         }
