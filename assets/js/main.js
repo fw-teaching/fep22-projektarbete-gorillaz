@@ -1,5 +1,5 @@
 console.log('main.js init');
-//checkCookie(); //Tills vidare on load ifall de behövs
+checkCookie(); //Tills vidare on load ifall de behövs
 
 /* SIDEBAR */
 function openNav() {
@@ -31,8 +31,13 @@ function ageVerification() {
   else {
     console.log("Passed age verification.");
     usernameGen();
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("money").value = "";
   }
 }
+
 //Användarinfo, så mycke deprecated att de blir inte riktigt rätt...
 function handleUserData() {
   //var appVer = navigator.appVer;
