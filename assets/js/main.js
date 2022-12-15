@@ -31,12 +31,12 @@ function ageVerification() {
     alert("Välkommen");
   }
 }
-//Användarinfo
+//Användarinfo, så mycke deprecated att de blir inte riktigt rätt...
 function handleUserData() {
   //var appVer = navigator.appVer;
   // var agent = navigator.userAgent;
   var browser = navigator.appCodeName; //Använder nu fastän det är deprecated. Ger något svar som inte heller är onödigt långt
-  var platform = navigator.platform;
+  var platform = navigator.platform; //Fel svar...
   var language = navigator.language;
   var width = screen.width; //* window.devicePixelRatio;
   var height = screen.height; //* window.devicePixelRatio;
@@ -88,7 +88,7 @@ function login() {
   let username = prompt("Användarnamn?:", "");
   //Sparar även i localstorage (följer videon)
   localStorage.setItem("username", username);
-  alert("Hej " + localStorage.getItem("username"));
+  console.log("Hej " + localStorage.getItem("username"));
   let datum = new Date();
   localStorage.setItem("date", datum);
   localStorage.getItem("date");
@@ -103,9 +103,9 @@ function checkCookie() {
   let user = getCookie("username");
   console.log("Användaren heter: " + user);
   if (user == "Antz") {
-    alert("Du e Antz");
+    console.log("Du e Antz");
   } else if (user != "Antz") {
-    alert("Du e inte ANtz!");
+    console.log("Du e inte ANtz!");
   }
   console.log(document.cookie);
   console.log(localStorage.getItem("username") + " " + localStorage.getItem("date"))
