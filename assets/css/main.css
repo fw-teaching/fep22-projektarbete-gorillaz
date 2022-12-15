@@ -43,6 +43,16 @@ footer {
 
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* FÄRGTEMAN */
 
 /* 1 (LIGHT) */
@@ -216,8 +226,24 @@ footer {
   flex: 50%;
 
   justify-content: center;
+
+  padding: 50px;
 }
 
 .userinfo-container button {
+  padding: 10px;
 
+}
+
+.register-button {
+  display: flex;
+
+  justify-content: center;
+
+  padding: 20px;
+  
+}
+
+.register-button button {
+  padding: 10px;
 }
