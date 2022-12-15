@@ -10,10 +10,10 @@ function openNav() {
     document.getElementById("mySidebar").style.width = "0";
   }
 
-  //DOES NOT WORK
+
 function ageVerification(){
-  let age = document.getElementById("age");
-  
+  let age = document.getElementById("age").value;
+  console.log(age)
   if (age<=17){
     console.log("Du är liten");
     alert("Du är minderårig och får inte spela!");
@@ -33,7 +33,7 @@ function handleUserData() {
     var ip = location.host;
     //var windowHeight = window.screen.height;
     //var windowWidth = window.screen.width;
-
+    //Print allt i konsol o inte på sidan!
     print.innerHTML = "App version= " + appVer + "<br>" + "Agent= " + agent + "<br>" + "Browser name= " + browserName + "<br>" + "Screen resolution= " + width + "x" + height + "<br>"+"IP adress= "+ip+"<br>";
     console.log(appVer + agent + browserName);
    
@@ -55,5 +55,5 @@ function handleUserData() {
             "<br>Longitude: " + position.coords.longitude;
     }
 }
-document.getElementById("Info").addEventListener("click", handleUserData);
+document.getElementById("info").addEventListener("click", handleUserData);
 document.getElementById("submit").addEventListener("click", ageVerification);
