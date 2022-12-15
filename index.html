@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/main.css"> 
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+    </style>
     <title>Casino</title>
 </head>
+
 <body>
-   
- 
-    <button type="button" onclick="stopHello()">STOP IT</button>
+    <div class="header">
+        <h1>CASINO GORILLAZ</h1>
+    </div>
 
-    <h1 id="timer-output"></h1>
-    <button id="Info">Info</button>
-    <p id="gibData">data comes here >:)</p>
-               <p id="geoInfo">Your location comes here</p>
-    <script>
-        console.log("Kitchen timer INIT")
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
 
-        // Grundutförande
-        let secondsLeft = 30;
-        const outputElem = document.querySelector("#timer-output");
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">Home</a>
+        <a href="./pages/ssp.html">Sten Sax Påse</a>
+        <a href="./pages/memory.html">Memory</a>
+        <a href="./pages/gallery.html">Happy Clients</a>
+    </div>
 
-        outputElem.innerText = secondsLeft;
-        const kitchenTimer = setInterval(function () {
-            secondsLeft--;
-            outputElem.innerText = secondsLeft;
+    <div id="content">
+        <form id="registration" >
+            First name:
+            <input type="text" id="fname"><br>
+            Last name:
+            <input type="text" id="lname"><br>
+            <button type="submit" id="submit">REGISTER</button>
 
-            if (secondsLeft <= 0) {
-                clearInterval(kitchenTimer);
-                outputElem.innerText = "Tiden är ute!"
-            }
-            
-        }, 1000);
+        </form>
+    </div>
 
 
-    </script>
-     <!-- Flytta script ner för att userdata/geolocation ska funka-->
+    <!-- how to implement handleuserdata here? pls fix-->
+    <button class="info" onclick="handleUserData()"> INFO </button>
+
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
      <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
