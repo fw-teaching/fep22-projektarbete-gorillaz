@@ -95,6 +95,8 @@ function login(){
     checkCookie();
 
 }
+//Funktion för att checka en cookie, i det här faller ska din username vara Antz för att du ska kunna se något speciellt. 
+// TO-DO: Utveckla funktionalitet för att se hur många gånger man spelat på sidan (besök eller ggr man spelar spel?)
 function checkCookie(){
     let user=getCookie("username");
     console.log("Användaren heter: "+user);
