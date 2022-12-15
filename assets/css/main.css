@@ -164,12 +164,25 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   flex: 50%;
-
-  padding: 40px;
 }
 
 .big-container>.gallery {
-  padding: 20px;
+  padding: 40px;
+}
+
+.big-container-memory {
+  justify-content: center;
+
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 300%;
+
+}
+
+.memory {
+  padding-top: 100px;
 }
 
 .main p {

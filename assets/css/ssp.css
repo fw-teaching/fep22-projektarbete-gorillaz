@@ -1,4 +1,10 @@
 .game {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
     text-align: center;
   }
 
@@ -7,9 +13,22 @@
 }
 
 .options {
+    padding: 20px;
 
 }
 
+.options button {
+    padding: 10px;
+}
+
 .result {
-    
+    padding: 20px;
+
+}
+
+.game button.reload {
+
+    padding: 20px;
+
+
 }

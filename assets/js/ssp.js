@@ -1,4 +1,3 @@
-/* Exempel på JS-fil för specifik sida (ssp-sidan i det här fallet) */
 
 console.log('ssp.js init'); // För att se att skriptet laddats in
 // Ny kod där man spelar mot dator istället för annan spelare
@@ -97,23 +96,24 @@ function game() {
         })
 
 
-        chooseMove.innerText = 'Game Over!!'
+        chooseMove.innerText = 'Game Over!'
         movesLeft.style.display = 'none';
 
         if (playerScore > computerScore) {
-            result.innerText = 'You Won The Game'
+            result.innerText = 'You Won :)'
             result.style.color = 'green';
         }
         else if (playerScore < computerScore) {
-            result.innerText = 'You Lost The Game';
+            result.innerText = 'You Lost :(';
             result.style.color = 'red';
         }
         else if (playerScore==computerScore) {
             result.innerText = 'Tie';
-            result.style.color = 'grey'
         }
-        reloadBtn.innerText = 'Restart';
-        reloadBtn.style.display = 'flex'
+        reloadBtn.innerText = 'RELOAD';
+        reloadBtn.style.display = 'flex';
+        reloadBtn.style.justifyContent = 'center';
+        reloadBtn.style.padding = '20px';
         reloadBtn.addEventListener('click', () => {
             window.location.reload();
         })
