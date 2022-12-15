@@ -1,13 +1,17 @@
 /* UNIVERSAL */
 * {
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 
 /* GENERAL */
 body {
   font-family: Arial;
+
   margin: 0;
+
+  padding-bottom: 60px;
   /*background-color: #472929;*/
 }
 
@@ -20,15 +24,22 @@ body {
   font-size: 30px;
 }
 
-.footer {
-  background: #3d1414;
+footer {
+ /* background: #3d1414;*/
   bottom: 0px;
 
   /*color: #472929;*/
 
-  padding: 20px;
+  font-size: 15px;
+
+  height:60px;
+
+  padding: 10px;
+  position: absolute;
 
   text-align: center;
+
+  width: 100%;
 
 }
 
@@ -46,7 +57,7 @@ body {
 
 }
 
-.footer {
+footer {
   background: #472929;
   color: #3d1414;
 }
