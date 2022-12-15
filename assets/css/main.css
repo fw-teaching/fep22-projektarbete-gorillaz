@@ -243,6 +243,8 @@ padding: 20px;
   float: right;
 
   height: 18px;
+
+  margin-left: 20px;
 }
 
 #content #registration input:focus {
