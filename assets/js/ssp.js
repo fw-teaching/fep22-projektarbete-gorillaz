@@ -32,7 +32,7 @@ function game() {
                 winner(this.innerText, computerChoice)
 
 
-                if (moves == 10) {
+                if (moves == 5) {
                     gameOver(playerOptions, movesLeft);
                 }
             })
