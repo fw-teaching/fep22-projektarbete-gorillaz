@@ -25,14 +25,14 @@ body {
 }
 
 footer {
- /* background: #3d1414;*/
+  /* background: #3d1414;*/
   bottom: 0px;
 
   /*color: #472929;*/
 
   font-size: 15px;
 
-  height:60px;
+  height: 60px;
 
   padding: 10px;
   position: absolute;
@@ -48,13 +48,14 @@ footer {
 /* 1 (LIGHT) */
 body {
   background-color: #998585;
-  color:#2c0e0e;
+
+  color: #2c0e0e;
 }
 
 .header {
-  background: #472929;
-  color: #3d1414;
+  background-color: #472929;
 
+  color: #3d1414;
 }
 
 footer {
@@ -73,6 +74,7 @@ footer {
 
 
 /*SIDEBAR*/
+
 .sidebar {
   height: 100%;
   width: 0;
@@ -127,7 +129,7 @@ footer {
 
 /* RESPONSIVITY */
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
 @media screen and (max-height: 450px) {
   .sidebar {
     padding-top: 15px;
@@ -138,16 +140,10 @@ footer {
   }
 }
 
+@media screen and (max-width: 700px) {}
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
 
-.small-container {
-  flex: 25%;
-  padding: 40px;
-}
+/* CONTENT */
 
 .big-container {
   justify-content: center;
@@ -161,13 +157,7 @@ footer {
   padding: 40px;
 }
 
-.big-container > .gallery {
-  padding: 20px;
-}
-
-.side {
-  flex: 30%;
-  background-color: #f1f1f1;
+.big-container>.gallery {
   padding: 20px;
 }
 
@@ -177,6 +167,57 @@ footer {
   padding: 20px;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.small-container {
+  flex: 25%;
+  padding: 40px;
+}
 
 
-@media screen and (max-width: 700px) {}
+/* HOMEPAGE CONTENT */
+
+.big-container-home {
+  display: flex;
+
+  flex: 60%;
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+.small-container-home {
+  flex: 20%;
+
+}
+
+#content {
+  display: flex;
+
+  flex: 50%;
+
+  justify-content: center;
+  
+}
+
+.userinfo-container {
+  display: flex;
+
+  flex: 50%;
+
+  justify-content: center;
+}
+
+.userinfo-container button {
+
+}
