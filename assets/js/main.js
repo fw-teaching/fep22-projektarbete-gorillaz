@@ -13,22 +13,22 @@ function openNav() {
 
   //DOES NOT WORK
 function ageVerification(){
-  let age
-  age=document.getElementById("age")
+  let age = document.getElementById("age");
+  
   if (age<=17){
-    console.log("Du är liten")
-    alert("Du är minderårig och får inte spela!")
+    console.log("Du är liten");
+    alert("Du är minderårig och får inte spela!");
   }
   else
   {
-    alert("Välkommen")
+    alert("Välkommen");
   }
 }
 function handleUserData() {
     var print = document.getElementById("gibData");
     var appVer = navigator.appVer;
     var agent = navigator.userAgent;
-    var browserName = navigator.browserName
+    var browserName = navigator.browserName;
     var width = screen.width * window.devicePixelRatio;
     var height = screen.height * window.devicePixelRatio;
     var ip = location.host;
@@ -47,7 +47,7 @@ function handleUserData() {
         } else {
             geoInfo.innerHTML = "Error: Var vänlig och tillåt platstjänster :)";
             window.alert("Error: Var vänlig och tillåt platstjänster :)");
-            console.log("Error: Var vänlig och tillåt platstjänster :)")
+            console.log("Error: Var vänlig och tillåt platstjänster :)");
         } //Funkar med allow men inte med block????
     }
     function showPosition(position) {
