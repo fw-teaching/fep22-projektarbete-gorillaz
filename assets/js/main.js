@@ -1,5 +1,5 @@
 console.log('main.js init');
-
+checkCookie(); //Tills vidare on load ifall de behövs
 
 /* SIDEBAR */
 function openNav() {
@@ -26,9 +26,10 @@ function ageVerification() {
   if (age <= 17) {
     console.log("Du är liten");
     alert("Du är minderårig och får inte spela!");
+    window.location.reload(true);
   }
   else {
-    alert("Välkommen");
+    console.log("Passed age verification.");
   }
 }
 //Användarinfo, så mycke deprecated att de blir inte riktigt rätt...
@@ -83,9 +84,9 @@ function getCookie(cname) {
   }
   return ""; //< Kod från w3schools ^
 
-}
-function login() {
-  let username = prompt("Användarnamn?:", "");
+}/*
+function login() {//Få ihop med usernameGen
+ 
   //Sparar även i localstorage (följer videon)
   localStorage.setItem("username", username);
   console.log("Hej " + localStorage.getItem("username"));
@@ -96,16 +97,16 @@ function login() {
   getCookie("username");
   checkCookie();
 
-}
+}*/
 //Funktion för att checka en cookie, i det här faller ska din username vara Antz för att du ska kunna se något speciellt. 
 // TO-DO: Utveckla funktionalitet för att se hur många gånger man spelat på sidan (besök eller ggr man spelar spel?)
 function checkCookie() {
   let user = getCookie("username");
   console.log("Användaren heter: " + user);
-  if (user == "Antz") {
+  if (user == "DoepelAn") {
     console.log("Du e Antz");
-  } else if (user != "Antz") {
-    console.log("Du e inte ANtz!");
+  } else if (user != "DoepelAn") {
+    console.log("Du e inte Antz!");
   }
   console.log(document.cookie);
   console.log(localStorage.getItem("username") + " " + localStorage.getItem("date"))
@@ -117,6 +118,15 @@ function usernameGen() {
   let lname = document.getElementById("lname").value;
 
   var username = lname + fname.slice(0, 2);
+
+  localStorage.setItem("username", username);
+  console.log("Hej " + localStorage.getItem("username"));
+  let datum = new Date();
+  localStorage.setItem("date", datum);
+  localStorage.getItem("date");
+  setCookie("username", username, 2);
+  getCookie("username");
+  checkCookie();
 
   //pls fix so it prints this under register button
   usrName.innerHTML = "Välkommen, ditt användarnamn är " + username + "!";
@@ -150,5 +160,5 @@ document.getElementById("register").addEventListener("click", usernameGen);
 document.getElementById("register").addEventListener("click", validateForm);
 document.getElementById("register").addEventListener("click", ageVerification);
 
-document.getElementById("cookieBtn").addEventListener("click", login);
+document.getElementById("register").addEventListener("click", login);
 
