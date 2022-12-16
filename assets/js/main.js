@@ -182,8 +182,6 @@ function currentTime() {
     vSlut == false;
   }
 
-  console.log(vDag);
-
   document.getElementById("clock").innerHTML = day + "." + month + "." + year + " " + "kl." + hour + ":" + minute + ":" + second;
 }
 

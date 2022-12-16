@@ -209,12 +209,12 @@ input[type=number] {
 
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 300%;
+  flex: 60%;
 
 }
 
 .memory {
-  padding-top: 100px;
+
 }
 
 .main p {
