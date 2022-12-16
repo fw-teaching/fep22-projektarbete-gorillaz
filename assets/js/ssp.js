@@ -3,8 +3,8 @@ console.log('ssp.js init'); // För att se att skriptet laddats in
 // Ny kod där man spelar mot dator istället för annan spelare
 // Man har nu 10 drag, kanske ändra det? edit: ändrade till 5, nu kan man säga att det är ett bäst av 5 spel.
 //TO-DO: Implementera att man kan spela med pengar.
-let money=localStorage.money;
-let bet=document.getElementById("bet").value;
+let money=parseInt(localStorage.money);
+let bet=parseInt(document.getElementById("bet").value);
 function placeBet(){
     if(bet>money){
         alert("You don't have that much money to bet!")
@@ -114,7 +114,7 @@ function game() {
         if (playerScore > computerScore) {
             result.innerText = 'You Won :)';
             result.style.color = 'green';
-            localStorage.setItem("money", parseInt(localStorage.money+document.getElementById("bet").value+document.getElementById("bet").value));
+            localStorage.setItem("money", money+bet+bet);
             console.log(money);
         }
         else if (playerScore < computerScore) {

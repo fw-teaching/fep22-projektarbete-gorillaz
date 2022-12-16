@@ -32,7 +32,7 @@ function ageVerification() {
     console.log("Passed age verification.");
     usernameGen();
     var money=document.getElementById("money").value;
-    localStorage.setItem("money", money);
+    localStorage.setItem("money", money); //parseInt no help
     document.getElementById("fname").value = "";
     document.getElementById("lname").value = "";
     document.getElementById("age").value = "";
@@ -182,7 +182,7 @@ function currentTime() {
     vSlut == false;
   }
 
-  console.log(vDag);
+ // console.log(vDag);
 
   document.getElementById("clock").innerHTML = day + "." + month + "." + year + " " + "kl." + hour + ":" + minute + ":" + second;
 }
