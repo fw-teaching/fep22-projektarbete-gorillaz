@@ -1,4 +1,63 @@
-/* Om en undersida behöver egen CSS (som endast gäller den) kan du ha den i en skild fil */
-body {
-    background-color: teal; /* Bara för att testa, ÄNDRA eller ta bort! */
+.game {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+.options {
+    padding: 20px;
+
+}
+
+.options button {
+    padding: 10px;
+}
+
+button.rock {
+    background-image: url('../images/rock.png');
+    background-repeat: no-repeat;
+
+    color: #ffffff00;
+
+    height: 90px;
+    width: 90px;
+}
+
+button.paper {
+    background-image: url('../images/paper.png');
+    background-repeat: no-repeat;
+
+    color: #ffffff00;
+
+    height: 90px;
+    width: 90px;
+}
+
+button.scissor {
+    background-image: url('../images/scissors.png');
+    background-repeat: no-repeat;
+
+    color: #ffffff00;
+
+    height: 90px;
+    width: 90px;
+}
+
+
+
+
+.result {
+    padding: 20px;
+
+}
+
+.game button.reload {
+
+    padding: 20px;
+
+
 }

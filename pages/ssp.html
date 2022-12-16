@@ -1,18 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/main.css"> <!-- importera main-CSS-->
-    <link rel="stylesheet" href="../assets/css/ssp.css"> <!-- importera sidspecifik CSS vid behov -->
-    <title>Sten, sax & påse</title>
+    <link rel="stylesheet" href="../assets/css/ssp.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+    </style>
+    <title>Sten Sax Påse</title>
 </head>
+
 <body>
-    
+    <div class="header">
+        <h1>CASINO GORILLAZ</h1>
+    </div>
+
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html">Home</a>
+        <a id="select" href="./ssp.html">Sten Sax Påse</a>
+        <a href="./memory.html">Memory</a>
+        <a href="./gallery.html">Happy Clients</a>
+    </div>
+
+    <div class="main">
+
+        <div class="main-left">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+        </div>
+
+        <div class="main-middle">
+            <p>ROCK PAPER SCISSORS</p>
+        </div>
+
+        <div class="main-right"></div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="small-container"></div>
+
+        <div class="big-container">
+
+            <div class="border">
+            <div class="game">
+
+                <div class="score">
+                    <div class="bet-placement"> 
+                        Place your bet
+                        <input type="number" id="bet">
+                        <button type="button" id="betBtn">Place bet</button>
+                    </div>
+                    <div class="playerScore">
+                        <h2>Player</h2>
+                        <p class="p-count count">0</p>
+
+                    </div>
+                    <div class="computerScore">
+                        <h2>Computer</h2>
+                        <p class="c-count count">0</p>
+
+                    </div>
+                </div>
+                <div class="move">Choose your move</div>
+
+                <div class="movesleft">Moves Left: 5 </div>
+
+                <div class="options">
+                    <button class="rock">ROCK</button>
+                    <button class="paper">PAPER</button>
+                    <button class="scissor">SCISSORS</button>
+                </div>
 
 
-    <script src="../assets/js/main.js"></script> <!-- importera main.js (OBS ../ )-->
-    <script src="../assets/js/ssp.js"></script> <!-- importera sidspecifik JS -->
+                <div class="result"></div>
+
+
+                <button class="reload">RELOAD</button>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="small-container"></div>
+
+    </div>
+
+
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/ssp.js"></script>
 </body>
+
+<footer>
+    <p>All rights reserved. Gorillaz Studios 2022 &#174;</p>
+</footer>
+
 </html>

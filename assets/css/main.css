@@ -1,4 +1,358 @@
-/* Site-wide styling here */
+/* UNIVERSAL */
+* {
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* GENERAL */
 body {
-    background-color: cornsilk; /* Bara för att testa, ÄNDRA eller ta bort! */
+  margin: 0;
+
+  padding-bottom: 60px;
+
+  background-color: #998585;
+  color: #3d1414;
+
+}
+
+.header {
+  background-color: #472929;
+  color: #3d1414;
+
+}
+
+footer {
+  background-color: #472929;
+  color: #3d1414;
+
+}
+
+
+
+
+/* ÄNDRA FÄRGTEMA
+/*body {
+  margin: 0;
+
+  padding-bottom: 60px;
+
+  --background-color: #998585;
+
+  --color: #3d1414;
+
+  --header-background: #472929;
+  --header-color: #3d1414;
+
+  --footer-background: #472929;
+  --footer-color: #3d1414;
+
+}*/
+
+/*.dark {
+  --background-color: #472929;
+
+  --color: #998585;
+
+  --header-background: #3d1414;
+  --header-color: #998585;
+
+  --footer-background: #3d1414;
+  --footer-color: #998585;
+
+
+}*/
+
+.openbtn {
+  background-color: #3d1414;
+  color: white;
+}
+
+.header {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 60px;
+  text-align: center;
+  /*background: #3d1414;
+  /color: #472929;*/
+  font-size: 30px;
+}
+
+footer {
+  /* background: #3d1414;*/
+  bottom: 0px;
+
+  /*color: #472929;*/
+
+  font-size: 15px;
+
+  height: 60px;
+
+  padding: 10px;
+  position: absolute;
+
+  text-align: center;
+
+  width: 100%;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* FÄRGTEMAN */
+
+/* 1 (LIGHT) */
+
+/* 2 */
+
+
+
+
+/*SIDEBAR*/
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #3d1414;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #2c0e0e70;
+}
+
+
+
+#select {
+  color: #ffffff;
+}
+
+/* RESPONSIVITY */
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {}
+
+
+/* CONTENT */
+
+.big-container {
+  justify-content: center;
+
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 50%;
+}
+
+.big-container>.gallery {
+  padding: 40px;
+}
+
+.big-container-memory {
+  justify-content: center;
+
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 60%;
+
+}
+
+.memory {
+
+}
+
+.main p {
+  padding-top: 20px;
+}
+
+.main {
+  display: flex;
+
+  flex-direction: row;
+
+  padding: 20px;
+
+  transition: margin-left .5s;
+
+}
+
+.main-left {
+  flex: 33%;
+
+  padding: 30px;
+
+}
+
+.main-middle {
+  flex: 33%;
+  font-size: x-large;
+
+  text-align: center;
+
+}
+
+.main-right {
+  flex: 33%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.small-container {
+  flex: 25%;
+  padding: 40px;
+}
+
+.border #usrName {
+  text-align: center;
+}
+
+
+/* HOMEPAGE CONTENT */
+
+.big-container-home {
+  display: flex;
+
+  flex: 60%;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-left: 200px;
+  padding-right: 200px;
+
+}
+
+.border {
+  border-color: #472929;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
+
+  padding: 20px;
+}
+
+.small-container-home {
+  flex: 20%;
+
+}
+
+#content {
+  display: flex;
+
+  flex: 50%;
+
+  justify-content: center;
+
+}
+
+#content #registration input {
+  border: none;
+  border-radius: 3px;
+
+  float: right;
+
+  height: 18px;
+
+  margin-left: 20px;
+}
+
+#content #registration input:focus {
+  outline: none;
+}
+
+#registration {
+  padding: 20px;
+}
+
+.userinfo-container {
+  display: flex;
+
+  flex: 50%;
+
+  justify-content: center;
+
+  padding: 50px;
+}
+
+.userinfo-container button {
+  padding: 10px;
+
+}
+
+.register-button {
+  display: flex;
+
+  justify-content: center;
+
+  padding: 20px;
+
+}
+
+.register-button button {
+  padding: 10px;
 }
