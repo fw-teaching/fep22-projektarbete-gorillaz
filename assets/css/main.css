@@ -7,12 +7,65 @@
 
 /* GENERAL */
 body {
-  font-family: Arial;
-
   margin: 0;
 
   padding-bottom: 60px;
-  /*background-color: #472929;*/
+
+  background-color: #998585;
+  color: #3d1414;
+
+}
+
+.header {
+  background-color: #472929;
+  color: #3d1414;
+
+}
+
+footer {
+  background-color: #472929;
+  color: #3d1414;
+
+}
+
+
+
+
+/* ÄNDRA FÄRGTEMA
+/*body {
+  margin: 0;
+
+  padding-bottom: 60px;
+
+  --background-color: #998585;
+
+  --color: #3d1414;
+
+  --header-background: #472929;
+  --header-color: #3d1414;
+
+  --footer-background: #472929;
+  --footer-color: #3d1414;
+
+}*/
+
+/*.dark {
+  --background-color: #472929;
+
+  --color: #998585;
+
+  --header-background: #3d1414;
+  --header-color: #998585;
+
+  --footer-background: #3d1414;
+  --footer-color: #998585;
+
+
+}*/
+
+.openbtn {
+  background-color: #3d1414;
+  color: white;
 }
 
 .header {
@@ -56,27 +109,6 @@ input[type=number] {
 /* FÄRGTEMAN */
 
 /* 1 (LIGHT) */
-body {
-  background-color: #998585;
-
-  color: #2c0e0e;
-}
-
-.header {
-  background-color: #472929;
-
-  color: #3d1414;
-}
-
-footer {
-  background: #472929;
-  color: #3d1414;
-}
-
-.openbtn {
-  background-color: #3d1414;
-  color: white;
-}
 
 /* 2 */
 
@@ -209,7 +241,7 @@ footer {
 
 .main-middle {
   flex: 33%;
-  font-size:x-large;
+  font-size: x-large;
 
   text-align: center;
 
