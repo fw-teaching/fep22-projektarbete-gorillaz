@@ -1,5 +1,6 @@
 console.log('main.js init');
 checkCookie(); //Tills vidare on load ifall de behövs
+visitCounter(); //localStorage
 
 /* SIDEBAR */
 function openNav() {
@@ -22,7 +23,6 @@ function validateForm() {
 //Age verification
 function ageVerification() {
   let age = document.getElementById("age").value;
-  console.log(age)
   if (age <= 17) {
     console.log("Du är liten");
     alert("Du är minderårig och får inte spela!");
@@ -117,6 +117,19 @@ function checkCookie() {
   console.log(document.cookie);
   console.log(localStorage.getItem("username") + " " + localStorage.getItem("date"))
   //To-Do: visits
+}
+function visitCounter(){
+var visitCount = localStorage.getItem("page_view");
+
+// Check if page_view entry is present
+if (visitCount) {
+  visitCount = Number(visitCount) + 1;
+  localStorage.setItem("page_view", visitCount);
+} else {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+ }
+ console.log(visitCount);
 }
 
 function usernameGen() {
