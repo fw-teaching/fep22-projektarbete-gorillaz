@@ -198,19 +198,23 @@ function weekDaySelector() {
 }
 
 function colorPicker()  {
-  const toggle = document.getElementById("toggle");
   const theme = window.localStorage.getItem("theme");
   
   if (theme === "dark") document.body.classList.add("dark");
-  
-  toggle.addEventListener("click", () => {
-     document.body.classList.toggle("dark");
-     if (theme === "dark") {
-       window.localStorage.setItem("theme", "light");
-     } else window.localStorage.setItem("theme", "dark");
-  });
 
+  if (theme === "dark") {
+    window.localStorage.setItem("theme", "light");
+  } else window.localStorage.setItem("theme", "dark");
+  
 } 
+const toggle = document.getElementById("toggle");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  
+});
+
+colorPicker();
 
 
 document.getElementById("info").addEventListener("click", handleUserData);
@@ -218,5 +222,6 @@ document.getElementById("info").addEventListener("click", handleUserData);
 //document.getElementById("register").addEventListener("click", usernameGen);
 document.getElementById("register").addEventListener("click", validateForm);
 document.getElementById("register").addEventListener("click", ageVerification);
+
 
 
