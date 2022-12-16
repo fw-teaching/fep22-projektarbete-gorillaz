@@ -31,6 +31,8 @@ function ageVerification() {
   else {
     console.log("Passed age verification.");
     usernameGen();
+    var money=document.getElementById("money").value;
+    localStorage.setItem("money", money);
     document.getElementById("fname").value = "";
     document.getElementById("lname").value = "";
     document.getElementById("age").value = "";
@@ -129,7 +131,7 @@ if (visitCount) {
   visitCount = 1;
   localStorage.setItem("page_view", 1);
  }
- console.log(visitCount);
+ console.log("Number of visits= "+visitCount);
 }
 
 function usernameGen() {
