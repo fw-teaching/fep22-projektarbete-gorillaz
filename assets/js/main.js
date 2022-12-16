@@ -54,9 +54,9 @@ function handleUserData() {
   //Experimentera med else if satser här för att få det att funka så att det kan fråga pånytt, åtminstone tills man tillåter
   getLocation();
   function getLocation() {
-    if (navigator.geolocation=true) {
+    if (navigator.geolocation = true) {
       navigator.geolocation.watchPosition(showPosition);
-    } else if(navigator.geolocation=false) {
+    } else if (navigator.geolocation = false) {
       window.alert("Error: Var vänlig och tillåt platstjänster :)");
       console.log("Error: Var vänlig och tillåt platstjänster :)");
     } //Funkar med allow men inte med block????
@@ -118,18 +118,18 @@ function checkCookie() {
   console.log(localStorage.getItem("username") + " " + localStorage.getItem("date"))
   //To-Do: visits
 }
-function visitCounter(){
-var visitCount = localStorage.getItem("page_view");
+function visitCounter() {
+  var visitCount = localStorage.getItem("page_view");
 
-// Check if page_view entry is present
-if (visitCount) {
-  visitCount = Number(visitCount) + 1;
-  localStorage.setItem("page_view", visitCount);
-} else {
-  visitCount = 1;
-  localStorage.setItem("page_view", 1);
- }
- console.log(visitCount);
+  // Check if page_view entry is present
+  if (visitCount) {
+    visitCount = Number(visitCount) + 1;
+    localStorage.setItem("page_view", visitCount);
+  } else {
+    visitCount = 1;
+    localStorage.setItem("page_view", 1);
+  }
+  console.log(visitCount);
 }
 
 function usernameGen() {
@@ -153,7 +153,7 @@ function usernameGen() {
 }
 
 function addZero(i) {
-  if (i < 10) {i = "0" + i}
+  if (i < 10) { i = "0" + i }
   return i;
 }
 
@@ -161,6 +161,8 @@ setInterval(currentTime, 1000);
 
 function currentTime() {
   const date = new Date();
+
+  let vSlut = new Boolean;
   let day = date.getDate();
   let month = date.getMonth();
   let year = date.getFullYear();
@@ -169,8 +171,44 @@ function currentTime() {
   let minute = addZero(date.getMinutes());
   let second = addZero(date.getSeconds());
 
-document.getElementById("clock").innerHTML = day + "." + month + "." + year + " " + "kl." + hour + ":" + minute + ":" + second ;
+  let vDag = date.getDay();
+
+  if (vDag == 0 || vDag == 6) {
+    vSlut == true;
+  }
+  else {
+    vSlut == false;
+  }
+
+  console.log(vDag);
+
+  document.getElementById("clock").innerHTML = day + "." + month + "." + year + " " + "kl." + hour + ":" + minute + ":" + second;
 }
+
+function weekDaySelector() {
+  const dropdown = custom.QuerySelectorAll('weekdays');
+
+  if (weekdays.value == 0 || weekdays.value == 6){
+    console.log("Veckoslut!");
+  }
+
+  weekDaySelector();
+}
+
+function colorPicker()  {
+  const toggle = document.getElementById("toggle");
+  const theme = window.localStorage.getItem("theme");
+  
+  if (theme === "dark") document.body.classList.add("dark");
+  
+  toggle.addEventListener("click", () => {
+     document.body.classList.toggle("dark");
+     if (theme === "dark") {
+       window.localStorage.setItem("theme", "light");
+     } else window.localStorage.setItem("theme", "dark");
+  });
+
+} 
 
 
 document.getElementById("info").addEventListener("click", handleUserData);
